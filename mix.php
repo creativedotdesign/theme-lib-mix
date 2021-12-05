@@ -49,7 +49,16 @@ function mix( $path, $manifest_directory = 'build' ) {
 	// Make sure there’s no leading slash
 	$path = ltrim( $path, '/' );
 
-	return get_theme_file_uri( trailingslashit( $manifest_directory ) . $path );
+  // get folder path from manifest file
+  $folder_path = dirname($manifest_path);
+
+  if (file_exists($folder_path . '/hot')) {
+    $url = 'http://localhost:8080/' . $path;
+  } else {
+    $url = get_theme_file_uri(trailingslashit($manifest_directory) . $path );
+  }
+
+	return $url;
 }
 
 /**
