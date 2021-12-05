@@ -1,5 +1,5 @@
 {
-  "name": "mindkomm/theme-lib-mix",
+  "name": "creativedotdesign/theme-lib-mix",
   "type": "library",
   "description": "Laravel Mix functions for WordPress projects",
   "license": "MIT",
@@ -7,9 +7,7 @@
     "php": ">=7.0.0"
   },
   "autoload": {
-    "files": [
-      "mix.php"
-    ]
+    "files": ["mix.php"]
   },
   "authors": [
     {

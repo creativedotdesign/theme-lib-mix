@@ -1,5 +1,9 @@
 # Mix
 
+## 1.1.1 – 2021-12-05
+
+- Add support for HMR.
+
 ## 1.1.0 – 2019-02-08
 
 - Added `mix_any()` as a new function to work with Mix outside of WordPress themes. Read [the documentation in the README](https://github.com/mindkomm/theme-lib-mix#mix_any).
