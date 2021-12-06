@@ -52,8 +52,11 @@ function mix( $path, $manifest_directory = 'build' ) {
   // get folder path from manifest file
   $folder_path = dirname($manifest_path);
 
+  $template_path = get_template_directory_uri(); 
+  $template_path = parse_url($template_path, PHP_URL_PATH);
+
   if (file_exists($folder_path . '/hot')) {
-    $url = 'http://localhost:8080/' . $path;
+    $url = 'http://localhost:8080' . trailingslashit($template_path) . trailingslashit($manifest_directory) . $path;
   } else {
     $url = get_theme_file_uri(trailingslashit($manifest_directory) . $path );
   }
